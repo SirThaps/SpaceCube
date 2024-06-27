@@ -1,0 +1,168 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: spaceFont;
+  src: url('../resources/Font/space.ttf');
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  font-family: Arial;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 500ms ease-in-out;
+  border: 1px solid aliceblue;
+  border-radius: 10px;
+  z-index: 10;
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, .8);
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.modal-header .title {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  font-family: Arial;
+  position: fixed;
+  opacity: 0;
+  transition: 500ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 0.8;
+  pointer-events: all;
+}
+
+.restart-button {
+  font-family: Arial;
+  margin-left: 42%;
+  background-color: white;
+  border-radius: 10%;
+  border: 2px dotted black;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#objective{
+  position: absolute;
+  z-index: 100;
+  color: aliceblue;
+  background: transparent;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 1.5rem;
+  float: right;
+  text-align: center;
+  margin-left: 43%;
+}
+
+.head{
+  left: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.missionhead{
+  left: 0;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.btn{
+  color: black;
+  padding: 10px 20px;
+  background: #fff;
+  border: 2px dotted black;
+  border-radius: 10%;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hiddenButtons{
+  z-index: -10;
+  visibility: hidden;
+}
+
+.popup{
+  z-index: 10;
+  width: 400px;
+  background-color: rgba(0, 0, 0, .8);
+  border-radius: 6px;
+  border: 1px solid aliceblue;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  font-size: 20px;
+  text-align: center;
+  padding: 0 30px 30px;
+  color: white;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+}
+
+.loading{
+  font-family: spaceFont;
+  z-index: 110;
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  font-size: 30px;
+  text-align: center;
+  padding: 200px 150px 150px;
+  color: white;
+  visibility: visible;
+}
+
+.close-loading{
+  visibility: hidden;
+}

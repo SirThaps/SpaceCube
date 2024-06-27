@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Level 3 </title>
+
+    <link href="styles3.css" rel="stylesheet">
+</head>
+<body>
+    <div id="blocker">
+        <div id="instructions">
+            <div id="playButton">
+                Press Here to Play
+                <p>
+                    ESC - Pause Screen
+                    <br />
+                    WASD / ARROWS - Move
+                    <br />
+                    LEFT MOUSE  - Fire
+                    <br />
+                    SPACEBAR  - Fire
+                    <br />
+                </p>
+            </div>   
+        </div>
+        <div id="MenuButtonContainer">
+            <button id="main-menu-button" onclick="mainMenu()" class="btn"> Main Menu </button>
+        </div>        
+    </div>
+
+
+    <div id="objective">
+        <div id="mission_title" class="missionhead"> Mission </div>
+        <div id="mission"> Shoot all the objects </div> <br>
+        <div id="timer">Time: 30s </div>
+      </div>
+    
+
+    <img id="crosshair" src="https://www.shanebrumback.com/images/reticle.png" alt="Crosshair">
+
+    <script src="https://cdn.jsdelivr.net/npm/three@latest/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/PointerLockControls.js"></script>
+    
+    <script type="module" src="level3.js"></script>
+
+    <script>
+
+        function mainMenu(){
+         location.href = "../index.html";
+        }
+        
+    </script>
+
+</body>
+</html>
